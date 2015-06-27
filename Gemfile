@@ -5,7 +5,6 @@ gem 'rails', '4.2.3'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
-
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
@@ -40,5 +39,6 @@ end
 gem 'twitter-bootstrap-rails'
 gem 'simple_form'
 gem 'rails-i18n'
-
 gem 'haml-rails', '~> 0.9'
+gem 'rabl'
+gem 'oj'
