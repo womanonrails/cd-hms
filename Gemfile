@@ -29,6 +29,7 @@ group :development do
   gem 'rubycritic', require: false
   gem 'sandi_meter'
   gem 'traceroute'
+  gem 'quiet_assets'
 end
 
 group :production do
