@@ -1,0 +1,10 @@
+language: ruby
+rvm:
+- 2.2.1
+deploy:
+  provider: heroku
+  api_key:
+    secure: MJftBsyG1cTrD8PME68GFYWG++jpeLe0642viW1JMnH1VxABC3YWaP86LH4BlLdngqntCAQEDmMS4cyvp4ReVYyG9bu7YsoSylXf7YmAbbc2SycKfDF+mhzaIqi6hBqbB+LypDh5geO6vUUB7529vY/XekAUMBY3k3zRy+IbjLkC6JBnDa3AXx4AfVSDizJM17kLyxYVJGsyllqzSZNgOusz5jSFzQMZATHM70/hZq+YzkmCD/B1Gp2wk8TiVqFRnwwaGhWvtY53fpbUk6IdZaMGWbMBOkDPaJp+LFFyTRqH3M6eFL4zFg6se5pdqzvDkCC7rpX1PkwRUCZGDvn/+5OnLyhbaPQJwas/EZ80mhK2xVdOaQz0jolmy24d9Ro2OELJVXBA7HsZvF1M6EGUNrPWSOUTGnB4FVSYiPMTI3aC/3nVMx5zA3hueR9fb7Uc2uLhhJzWYeE54dgKb5KUYSZdwaXNzPDkq+2xRqW9gamjlO9q+Gz+BNCfYqM86dVjO9/BxHnRPtZ/FVG6WnF1YqBlS+ISG0fWihre0VahMO5AstUPt50fYx8hHyuhLUq2zuct3Jbf9SiQxwjLSQ8ab7GqgsVvnU7w+BLeCUQaZ1KChr60mOyfAPWsyLyRoQCXk9+ur74vthcZJF9p52zKfiwZR0JwPxgv75Sd2yhHC7M=
+  app: hardwaremanager
+  on:
+    branch: develop
