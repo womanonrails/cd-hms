@@ -17,6 +17,8 @@ group :development, :test do
   gem 'spring'
   gem 'sqlite3'
   gem 'rspec-rails', '~> 3.0'
+  gem 'apitome'
+  gem 'rspec_api_documentation'
 end
 
 group :development do
