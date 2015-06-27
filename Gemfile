@@ -37,6 +37,10 @@ group :production do
   gem 'rails_12factor'
 end
 
+source 'https://rails-assets.org' do
+  gem 'rails-assets-bootstrap'
+end
+
 gem 'twitter-bootstrap-rails'
 gem 'simple_form'
 gem 'rails-i18n'
