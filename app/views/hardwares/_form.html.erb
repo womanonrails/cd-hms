@@ -1,0 +1,26 @@
+<%= simple_form_for @hardware, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :name %>
+  <%= error_span(@hardware[:name]) %>
+  <%= f.input :length %>
+  <%= error_span(@hardware[:length]) %>
+  <%= f.input :width %>
+  <%= error_span(@hardware[:width]) %>
+  <%= f.input :height %>
+  <%= error_span(@hardware[:height]) %>
+  <%= f.input :weight %>
+  <%= error_span(@hardware[:weight]) %>
+  <%= f.input :serial_number %>
+  <%= error_span(@hardware[:serial_number]) %>
+  <%= f.input :price %>
+  <%= error_span(@hardware[:price]) %>
+  <%= f.input :status, collection: Hardware.statuses.keys %>
+  <%= error_span(@hardware[:status]) %>
+  <%= f.input :note %>
+  <%= error_span(@hardware[:note]) %>
+  <%= f.input :warranty_expired_on %>
+  <%= error_span(@hardware[:warranty_expired_on]) %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                hardwares_path, :class => 'btn btn-default' %>
+<% end %>

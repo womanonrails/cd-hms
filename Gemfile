@@ -36,6 +36,7 @@ group :test do
   gem 'coveralls', require: false
   gem 'codeclimate-test-reporter', require: false
   gem 'simplecov', require: false
+  gem 'factory_girl_rails'
 end
 
 group :production do
@@ -49,7 +50,6 @@ end
 gem 'twitter-bootstrap-rails'
 gem 'simple_form'
 gem 'rails-i18n'
-gem 'haml-rails', '~> 0.9'
 gem 'rabl'
 gem 'oj'
 gem 'html5shiv-js-rails'
