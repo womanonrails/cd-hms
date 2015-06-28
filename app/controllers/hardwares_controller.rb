@@ -69,6 +69,6 @@ class HardwaresController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def hardware_params
-      params.require(:hardware).permit(:name, :length, :width, :height, :weight, :serial_number, :price, :status, :warranty_expired_on)
+      params.require(:hardware).permit(:name, :length, :width, :height, :weight, :serial_number, :price, :status, :note, :warranty_expired_on)
     end
 end

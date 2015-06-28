@@ -10,7 +10,8 @@ RSpec.describe "hardwares/show", type: :view do
       :weight => 1.5,
       :serial_number => "Serial Number",
       :price => 1.5,
-      :status => 1
+      :status => 1,
+      :note => "MyText"
     ))
   end
 
@@ -24,5 +25,6 @@ RSpec.describe "hardwares/show", type: :view do
     expect(rendered).to match(/Serial Number/)
     expect(rendered).to match(/1.5/)
     expect(rendered).to match(/1/)
+    expect(rendered).to match(/MyText/)
   end
 end

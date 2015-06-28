@@ -9,6 +9,7 @@ class CreateHardwares < ActiveRecord::Migration
       t.string :serial_number
       t.float :price
       t.integer :status
+      t.text :note
       t.date :warranty_expired_on
 
       t.timestamps null: false
