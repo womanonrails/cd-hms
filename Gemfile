@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'pg'
+gem 'puma'
 
 group :development, :test do
   gem 'byebug'

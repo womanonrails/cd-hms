@@ -172,6 +172,8 @@ GEM
     pg (0.18.2)
     powerpack (0.1.1)
     procto (0.0.2)
+    puma (2.11.3)
+      rack (>= 1.1, < 2.0)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
     rabl (0.11.6)
@@ -374,6 +376,7 @@ DEPENDENCIES
   normalize-rails
   oj
   pg
+  puma
   quiet_assets
   rabl
   rails (= 4.2.3)
