@@ -1,15 +1,14 @@
 default: &default
-  adapter: sqlite3
-  pool: 5
-  timeout: 5000
+  adapter: postgresql
+  encoding: unicode
 
 development:
   <<: *default
-  database: db/development.sqlite3
+  database: cd_hms_development
 
 test:
   <<: *default
-  database: db/test.sqlite3
+  database: cd_hms_test
 
 production:
   adapter: postgresql
