@@ -111,6 +111,11 @@ GEM
     equalizer (0.0.11)
     erubis (2.7.0)
     execjs (2.5.2)
+    factory_girl (4.5.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.5.0)
+      factory_girl (~> 4.5.0)
+      railties (>= 3.0.0)
     fastercsv (1.5.5)
     flay (2.4.0)
       ruby_parser (~> 3.0)
@@ -368,6 +373,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   coveralls
   draper
+  factory_girl_rails
   haml-rails (~> 0.9)
   html5shiv-js-rails
   jbuilder (~> 2.0)
