@@ -4,15 +4,15 @@ default: &default
 
 development:
   <<: *default
-  database: cd_hms_development
+  database: hms_development
 
 test:
   <<: *default
-  database: cd_hms_test
+  database: hms_test
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: <%= ENV['APP_DATABASE_DATABASE'] %>
+  database: <%= ENV['APP_DATABASE_NAME'] %>
   username: <%= ENV['APP_DATABASE_USERNAME'] %>
   password: <%= ENV['APP_DATABASE_PASSWORD'] %>
