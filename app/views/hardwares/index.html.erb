@@ -5,36 +5,16 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:name) %></th>
-      <th><%= model_class.human_attribute_name(:length) %></th>
-      <th><%= model_class.human_attribute_name(:width) %></th>
-      <th><%= model_class.human_attribute_name(:height) %></th>
-      <th><%= model_class.human_attribute_name(:weight) %></th>
-      <th><%= model_class.human_attribute_name(:serial_number) %></th>
-      <th><%= model_class.human_attribute_name(:price) %></th>
       <th><%= model_class.human_attribute_name(:status) %></th>
-      <th><%= model_class.human_attribute_name(:note) %></th>
-      <th><%= model_class.human_attribute_name(:warranty_expired_on) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
     <% @hardwares.each do |hardware| %>
       <tr>
-        <td><%= link_to hardware.id, hardware_path(hardware) %></td>
-        <td><%= hardware.name %></td>
-        <td><%= hardware.length %></td>
-        <td><%= hardware.width %></td>
-        <td><%= hardware.height %></td>
-        <td><%= hardware.weight %></td>
-        <td><%= hardware.serial_number %></td>
-        <td><%= hardware.price %></td>
+        <td><%= link_to hardware.name, hardware_path(hardware) %></td>
         <td><%= hardware.status %></td>
-        <td><%= hardware.note %></td>
-        <td><%= hardware.warranty_expired_on %></td>
-        <td><%=l hardware.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_hardware_path(hardware), :class => 'btn btn-default btn-xs' %>
