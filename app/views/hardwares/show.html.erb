@@ -6,24 +6,22 @@
 <dl class="dl-horizontal">
   <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
   <dd><%= @hardware.name %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:length) %>:</strong></dt>
-  <dd><%= @hardware.length %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:width) %>:</strong></dt>
-  <dd><%= @hardware.width %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:height) %>:</strong></dt>
-  <dd><%= @hardware.height %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:weight) %>:</strong></dt>
-  <dd><%= @hardware.weight %></dd>
   <dt><strong><%= model_class.human_attribute_name(:serial_number) %>:</strong></dt>
   <dd><%= @hardware.serial_number %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:warranty_expired_on) %>:</strong></dt>
+  <dd><%= @hardware.warranty_expired_on %></dd>
+
+  <dt><strong><%= t('.size') %>:</strong></dt>
+  <dd><%= @hardware.length %>x<%= @hardware.width %>x<%= @hardware.height %> [cm]</dd>
+  <dt><strong><%= model_class.human_attribute_name(:weight) %>:</strong></dt>
+  <dd><%= @hardware.weight %></dd>
   <dt><strong><%= model_class.human_attribute_name(:price) %>:</strong></dt>
   <dd><%= @hardware.price %></dd>
+
   <dt><strong><%= model_class.human_attribute_name(:status) %>:</strong></dt>
   <dd><%= @hardware.status %></dd>
   <dt><strong><%= model_class.human_attribute_name(:note) %>:</strong></dt>
   <dd><%= @hardware.note %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:warranty_expired_on) %>:</strong></dt>
-  <dd><%= @hardware.warranty_expired_on %></dd>
 </dl>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
