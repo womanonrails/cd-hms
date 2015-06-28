@@ -12,3 +12,6 @@ deploy:
   app: hardwaremanager
   on:
     repo: womanonrails/cd-hms
+addons:
+  code_climate:
+    repo_token: BQgntaBKl5bV8kSl0g1BDYGFg920q0eJH
