@@ -20,6 +20,7 @@ require 'rails_helper'
 
 RSpec.describe HardwaresController, type: :controller do
 
+  login_user
   # This should return the minimal set of attributes required to create a valid
   # Hardware. As you add validations to Hardware, be sure to
   # adjust the attributes here as well.
