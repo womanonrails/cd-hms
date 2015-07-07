@@ -18,6 +18,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'apitome'
   gem 'rspec_api_documentation'
+  gem 'dotenv-rails'
 end
 
 group :development do
