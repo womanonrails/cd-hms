@@ -35,6 +35,8 @@
           <ul class="nav navbar-nav navbar-right">
             <% if user_signed_in? %>
               <li><%= link_to t('logout'), destroy_user_session_path, method: :delete %></li>
+            <% else %>
+              <li><%= link_to t('sign_in_with_google'), user_omniauth_authorize_path(:google_oauth2) %></li>
             <% end %>
           </ul>
         </div>
