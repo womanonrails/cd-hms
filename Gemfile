@@ -18,6 +18,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'apitome'
   gem 'rspec_api_documentation'
+  gem 'dotenv-rails'
+  gem 'pry-rails'
 end
 
 group :development do
@@ -58,3 +60,4 @@ gem 'normalize-rails'
 gem 'draper'
 gem 'faker'
 gem 'devise'
+gem 'omniauth-google-oauth2'
