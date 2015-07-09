@@ -1,6 +1,10 @@
 language: ruby
 rvm:
 - 2.2.1
+before_script:
+  - psql -c 'create database hms_test' -U postgres
+script:
+  - RAILS_ENV=test bundle exec rake db:migrate
 deploy:
   provider: heroku
   api_key:
@@ -8,3 +12,6 @@ deploy:
   app: hardwaremanager
   on:
     repo: womanonrails/cd-hms
+addons:
+  code_climate:
+    repo_token: BQgntaBKl5bV8kSl0g1BDYGFg920q0eJH

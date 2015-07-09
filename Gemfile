@@ -7,17 +7,19 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
-gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'pg'
+gem 'puma'
 
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
-  gem 'sqlite3'
   gem 'rspec-rails', '~> 3.0'
   gem 'apitome'
   gem 'rspec_api_documentation'
+  gem 'dotenv-rails'
+  gem 'pry-rails'
 end
 
 group :development do
@@ -32,8 +34,14 @@ group :development do
   gem 'quiet_assets'
 end
 
+group :test do
+  gem 'coveralls', require: false
+  gem 'codeclimate-test-reporter', require: false
+  gem 'simplecov', require: false
+  gem 'factory_girl_rails'
+end
+
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
 end
 
@@ -44,10 +52,12 @@ end
 gem 'twitter-bootstrap-rails'
 gem 'simple_form'
 gem 'rails-i18n'
-gem 'haml-rails', '~> 0.9'
 gem 'rabl'
 gem 'oj'
 gem 'html5shiv-js-rails'
 gem 'respond-js-rails'
 gem 'normalize-rails'
 gem 'draper'
+gem 'faker'
+gem 'devise'
+gem 'omniauth-google-oauth2'
