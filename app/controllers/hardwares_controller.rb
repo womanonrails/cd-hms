@@ -1,8 +1,8 @@
 class HardwaresController < ApplicationController
+  respond_to :html
   before_action :set_hardware, only: [:show, :edit, :update, :destroy]
 
   # GET /hardwares
-  # GET /hardwares.json
   def index
     @hardwares = Hardware.all
   end
