@@ -6,6 +6,8 @@ before_script:
   - psql -c 'create database hms_test' -U postgres
 script:
   - RAILS_ENV=test bundle exec rake db:migrate
+after_success:
+  - coveralls
 deploy:
   provider: heroku
   api_key:
