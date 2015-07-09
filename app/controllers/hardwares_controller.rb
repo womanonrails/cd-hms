@@ -8,7 +8,6 @@ class HardwaresController < ApplicationController
   end
 
   # GET /hardwares/1
-  # GET /hardwares/1.json
   def show
   end
 

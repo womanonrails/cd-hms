@@ -37,40 +37,24 @@ resource 'Api::Hardware' do
     end
   end
 
-  # get '/hits/:id' do
-  #   parameter :id, 'Id of hits', required: true
+  get 'api/hardwares/:id' do
+    parameter :id, 'Id of hardware', required: true
 
-  #   let(:id) { hits.id }
-  #   let(:member) { hits.members.first }
-  #   let(:hits) do
-  #     create(
-  #       :hits, title: 'Ruby on Rails', owner_id: owner_id, user_id: owner_id,
-  #              idea_ids: idea_ids
-  #     )
-  #   end
-  #   let(:idea_ids) do
-  #     [
-  #       'f52e5de4-beaf-455c-94fc-2d794a610c5c',
-  #       'a5f5b098-a963-4e59-9b02-50427e07a43d'
-  #     ]
-  #   end
+    let(:id) { hardware.id }
+    let(:hardware) do
+      create(:hardware,
+             name: 'Computer', length: 120, warranty_expired_on: Time.now
+            )
+    end
 
-  #   example 'Show specific hits for member' do
-  #     do_request
-  #     data = JSON.parse(response_body)['hits']
-  #     hits_ideas = JSON.parse(response_body)['ideas']
-  #     hits_member = JSON.parse(response_body)['members']
-  #     expect(status).to eq 200
-  #     expect(data.slice('title')).to eq('title' => 'Ruby on Rails')
-  #     expect(data.slice('ideas_number')).to eq('ideas_number' => idea_ids.size)
-  #     expect(hits_ideas.first['id']).to eq idea_ids.first
-  #     expect(hits_ideas.last['id']).to eq idea_ids.last
-  #     expect(hits_ideas.first['hits_id']).to eq id
-  #     expect(hits_ideas.last['hits_id']).to eq id
-  #     expect(hits_member.last['id']).to eq member.id
-  #     expect(data).to have_key('created_at')
-  #   end
-  # end
+    example 'Show specific hardware' do
+      do_request
+      data = JSON.parse(response_body)['hardware']
+      expect(status).to eq 200
+      expect(data.slice('name')).to eq('name' => hardware.name)
+      expect(data.slice('length')).to eq('length' => hardware.length)
+    end
+  end
 
   # get '/hits/:id' do
   #   parameter :id, 'Id of hits', required: true

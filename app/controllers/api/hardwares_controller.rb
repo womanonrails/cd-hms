@@ -5,4 +5,8 @@ class Api::HardwaresController < ApplicationController
   def index
     @hardwares = Hardware.all
   end
+
+  def show
+    @hardware = Hardware.find(params[:id])
+  end
 end
