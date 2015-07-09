@@ -1,6 +1,7 @@
 language: ruby
 rvm:
-- 2.2.1
+  - 2.2.1
+  - 2.2.2
 before_script:
   - psql -c 'create database hms_test' -U postgres
 script:
@@ -9,6 +10,10 @@ deploy:
   provider: heroku
   api_key:
     secure: yqAyQ5gZ2Ps7S4MWBhvhoO1mVmGdxmDvAJvL0HioDzeqOO0az8eyX4bDZoAjByM7vKw5CfiNFk6ZNqjfAROChxarg+GIkJX+rJd54ve2EPtJbYWVxu3Z+ew68giRyNjLFnR7RvbC44lOxoRL777Sfg+BThjVv7KtDAtL4C+aRXA5mJ4zUuzFaE2XVuAajGFvGSGjwco6XXu9cE6KSRN1nbbs6EZ8rwzmgJfdzAgFIlPrJqraGZs528f2mzl+UaeCF3m6nDuQzuVaMGjwem2GC//fUhD/ubmvxjcvuaAzXBXlDjj69HvEZxiX1UGJFKaouPkDI0DRoXTvQyIAHfY+cXQKpOwh4eTILHCIrRTS23xlTW1+XQjnL3dUzBTxKRnYC+CvaqwCtCJHR7FoA8Y4sJF3qZ4BYEFHvUJRgaTXNt8B91O4w8j8gFYdmXC5iPEtIA2cEy/WHYrkZxG/whjDnrowbw5kQeKvKxiSfH+TX64oOJ2RPMDVrCybZbMpwfE+Uqe4nPYagJ4gitjj5YD3DtR96vdOv38EJO9LKDZyOGzNgusCLw6j/xOtJ3ebobMqNbD+EjpnJU2auPfnzRp8E+qjYNoHyRAryvCVyzxu5x4nJzgbTS0j8GZajZhGOlUmFvSzwwSdw9z3NsBCokRAx/CwQbxB678qXXXEiQRDLUc=
+  run:
+    - "rake db:migrate"
+    - restart
+    - "rake cleanup"
   app: hardwaremanager
   on:
     repo: womanonrails/cd-hms
