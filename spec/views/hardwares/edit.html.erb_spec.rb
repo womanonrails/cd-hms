@@ -12,7 +12,7 @@ RSpec.describe 'hardwares/edit', type: :view do
         weight: 1.5,
         serial_number: 'MyString',
         price: 1.5,
-        status: 1,
+        state: 1,
         note: 'MyText'
     ))
   end
@@ -28,7 +28,7 @@ RSpec.describe 'hardwares/edit', type: :view do
       assert_select 'input#hardware_weight[name=?]', 'hardware[weight]'
       assert_select 'input#hardware_serial_number[name=?]', 'hardware[serial_number]'
       assert_select 'input#hardware_price[name=?]', 'hardware[price]'
-      assert_select 'select#hardware_status[name=?]', 'hardware[status]'
+      assert_select 'select#hardware_state[name=?]', 'hardware[state]'
       assert_select 'textarea#hardware_note[name=?]', 'hardware[note]'
     end
   end
