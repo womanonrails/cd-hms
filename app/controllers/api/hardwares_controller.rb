@@ -21,7 +21,7 @@ class Api::HardwaresController < ApplicationController
   def hardware_params
     params.require(:hardware).permit(
       :name, :length, :width, :height, :weight, :serial_number, :price,
-      :status, :note, :warranty_expired_on
+      :state, :note, :warranty_expired_on
     )
   end
 end

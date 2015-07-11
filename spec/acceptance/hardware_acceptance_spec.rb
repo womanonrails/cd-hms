@@ -12,7 +12,7 @@ resource 'Api::Hardware' do
   response_field :weight, 'Weight of hardware', 'Type' => 'Float'
   response_field :serial_number, 'Hardware serial number', 'Type' => 'String'
   response_field :price, 'Price of hardware', 'Type' => 'Float'
-  response_field :status, 'Status of hardware', 'Type' => 'String'
+  response_field :state, 'Status of hardware', 'Type' => 'String'
   response_field :note, 'Notes about hardware', 'Type' => 'Text'
   response_field :warranty_expired_on, 'Hardware warranty expired date', 'Type' => 'Date'
 
@@ -64,17 +64,17 @@ resource 'Api::Hardware' do
     parameter :weight, 'Weight of hardware'
     parameter :serial_number, 'Hardware serial number'
     parameter :price, 'Price of hardware'
-    # parameter :status, 'Status of hardware'
+    parameter :state, 'Status of hardware'
     parameter :note, 'Notes about hardware'
     parameter :warranty_expired_on, 'Hardware warranty expired date'
 
     let(:name) { 'Computer' }
     let(:length) { 120.0 }
-    let(:hardware_status) { 'available' }
+    let(:state) { 'available' }
     let(:warranty_expired_on) { Time.now.to_s }
 
     let(:raw_post) do
-      { hardware: params.merge(status: hardware_status) }.to_json
+      { hardware: params }.to_json
     end
 
     example_request 'Creating a hardware' do
@@ -82,7 +82,7 @@ resource 'Api::Hardware' do
       expect(hardware.except('id', 'created_at', 'updated_at')).to eq(
         'name' => name,
         'length' => length,
-        'status' => hardware_status,
+        'state' => state,
         'width' => nil,
         'height' => nil,
         'weight' => nil,
@@ -95,8 +95,12 @@ resource 'Api::Hardware' do
     end
   end
 
-  # put 'hits/:id' do
-  #   let(:hits) { create(:hits, title: 'Ruby on Rails', owner_id: owner_id) }
+  # put 'hardware/:id' do
+  #   let(:hardware) do
+  #     create(:hardware,
+  #            name: 'Computer', length: 120, warranty_expired_on: Time.now
+  #           )
+  #   end
   #   let(:id) { hits.id }
 
   #   parameter :title, 'Title of hits'

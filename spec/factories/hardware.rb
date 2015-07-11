@@ -7,6 +7,6 @@ FactoryGirl.define do
     weight 12
     serial_number 'abcd1234'
     price 1200
-    status 0
+    state 0
   end
 end
