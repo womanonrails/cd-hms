@@ -16,6 +16,12 @@ class Api::HardwaresController < ApplicationController
     respond_with @hardware
   end
 
+  def update
+    @hardware = Hardware.find(params[:id])
+    @hardware.update(hardware_params)
+    respond_with @hardware
+  end
+
   private
 
   def hardware_params

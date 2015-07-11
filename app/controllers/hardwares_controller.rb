@@ -34,15 +34,12 @@ class HardwaresController < ApplicationController
   end
 
   # PATCH/PUT /hardwares/1
-  # PATCH/PUT /hardwares/1.json
   def update
     respond_to do |format|
       if @hardware.update(hardware_params)
-        format.html { redirect_to @hardware, notice: 'Hardware was successfully updated.' }
-        format.json { render :show, status: :ok, location: @hardware }
+        redirect_to @hardware, notice: 'Hardware was successfully updated.'
       else
-        format.html { render :edit }
-        format.json { render json: @hardware.errors, status: :unprocessable_entity }
+        render :edit
       end
     end
   end

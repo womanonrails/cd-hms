@@ -95,28 +95,31 @@ resource 'Api::Hardware' do
     end
   end
 
-  # put 'hardware/:id' do
-  #   let(:hardware) do
-  #     create(:hardware,
-  #            name: 'Computer', length: 120, warranty_expired_on: Time.now
-  #           )
-  #   end
-  #   let(:id) { hits.id }
+  put 'api/hardwares/:id' do
+    let(:hardware) do
+      create(:hardware,
+             name: 'Computer', length: 120, warranty_expired_on: Time.now
+            )
+    end
+    let(:id) { hardware.id }
 
-  #   parameter :title, 'Title of hits'
-  #   parameter :description, 'Description of hits'
-  #   parameter :votes, 'Nubmer of votes for hits'
-  #   parameter :idea_ids, 'Id of hits ideas'
+    parameter :name, 'Name of hardware', required: true
+    parameter :length, 'Length of hardware'
+    parameter :width, 'Width of hardware'
+    parameter :height, 'Height of hardware'
+    parameter :weight, 'Weight of hardware'
+    parameter :serial_number, 'Hardware serial number'
+    parameter :price, 'Price of hardware'
+    parameter :state, 'Status of hardware'
+    parameter :note, 'Notes about hardware'
+    parameter :warranty_expired_on, 'Hardware warranty expired date'
 
-  #   let(:title) { 'New Ruby on Rails' }
-  #   let(:description) { 'Ruby on Rails Rules' }
-  #   let(:idea_ids) { %w( 7 8 9 11 15 ) }
-  #   let(:votes) { rand(1..9) }
+    let(:name) { 'New Computer' }
 
-  #   let(:raw_post) { { hits: params }.to_json }
+    let(:raw_post) { { hardware: params }.to_json }
 
-  #   example_request 'Updating an hits' do
-  #     expect(status).to eq 204
-  #   end
-  # end
+    example_request 'Updating a hardware' do
+      expect(status).to eq 204
+    end
+  end
 end
