@@ -10,7 +10,7 @@ resource 'Api::Hardware' do
   response_field :width, 'Width of hardware', 'Type' => 'Float'
   response_field :height, 'Height of hardware', 'Type' => 'Float'
   response_field :weight, 'Weight of hardware', 'Type' => 'Float'
-  response_field :serial_numver, 'Hardware serial number', 'Type' => 'String'
+  response_field :serial_number, 'Hardware serial number', 'Type' => 'String'
   response_field :price, 'Price of hardware', 'Type' => 'Float'
   response_field :status, 'Status of hardware', 'Type' => 'String'
   response_field :note, 'Notes about hardware', 'Type' => 'Text'
@@ -56,63 +56,44 @@ resource 'Api::Hardware' do
     end
   end
 
-  # get '/hits/:id' do
-  #   parameter :id, 'Id of hits', required: true
+  post 'api/hardwares' do
+    parameter :name, 'Name of hardware', required: true
+    parameter :length, 'Length of hardware'
+    parameter :width, 'Width of hardware'
+    parameter :height, 'Height of hardware'
+    parameter :weight, 'Weight of hardware'
+    parameter :serial_number, 'Hardware serial number'
+    parameter :price, 'Price of hardware'
+    # parameter :status, 'Status of hardware'
+    parameter :note, 'Notes about hardware'
+    parameter :warranty_expired_on, 'Hardware warranty expired date'
 
-  #   let(:id) { hits.id }
-  #   let(:hits) { create(:hits, title: 'Ruby on Rails') }
+    let(:name) { 'Computer' }
+    let(:length) { 120.0 }
+    let(:hardware_status) { 'available' }
+    let(:warranty_expired_on) { Time.now.to_s }
 
-  #   example 'Show hits for other user (not member)' do
-  #     do_request
-  #     data = JSON.parse(response_body)['hits']
-  #     hits_ideas = JSON.parse(response_body)['ideas']
-  #     expect(status).to eq 200
-  #     expect(data.slice('title', 'permissions')).to eq(
-  #       'title' => 'Ruby on Rails',
-  #       'permissions' => { 'editable' => false }
-  #     )
-  #     expect(data).to have_key('created_at')
-  #     expect(hits_ideas).to be_empty
-  #   end
-  # end
+    let(:raw_post) do
+      { hardware: params.merge(status: hardware_status) }.to_json
+    end
 
-  # post '/hits' do
-  #   parameter :title, 'Title of hits', required: true
-  #   parameter :description, 'Description of hits'
-  #   parameter :votes, 'Nubmer of votes for hits', required: true
-  #   parameter :idea_ids, 'Id of hits ideas', required: true
-
-  #   let(:description) { 'This is Ruby on Rails' }
-  #   let(:idea_ids) do
-  #     [
-  #       'f52e5de4-beaf-455c-94fc-2d794a610c5c',
-  #       'a5f5b098-a963-4e59-9b02-50427e07a43d'
-  #     ]
-  #   end
-  #   let(:member) { Hits.last.members.first }
-  #   let(:title) { 'Ruby on Rails' }
-  #   let(:votes) { rand(1..9) }
-
-  #   let(:raw_post) { { hits: params }.to_json }
-
-  #   example_request 'Creating a hits' do
-  #     hits = JSON.parse(response_body)['hits']
-  #     hits_ideas = JSON.parse(response_body)['ideas']
-  #     expect(hits.except('id', 'created_at', 'updated_at')).to eq(
-  #       'title' => title,
-  #       'description' => description,
-  #       'votes' => votes,
-  #       'ideas_number' => idea_ids.size,
-  #       'idea_ids' => idea_ids,
-  #       'member_id' => member.id,
-  #       'permissions' => { 'editable' => true }
-  #     )
-  #     expect(hits).to have_key('created_at')
-  #     expect(hits_ideas.first['id']).to eq idea_ids.first
-  #     expect(hits_ideas.last['id']).to eq idea_ids.last
-  #     expect(status).to eq 201
-  #   end
-  # end
+    example_request 'Creating a hardware' do
+      hardware = JSON.parse(response_body)['hardware']
+      expect(hardware.except('id', 'created_at', 'updated_at')).to eq(
+        'name' => name,
+        'length' => length,
+        'status' => hardware_status,
+        'width' => nil,
+        'height' => nil,
+        'weight' => nil,
+        'serial_number' => nil,
+        'price' => nil,
+        'note' => nil,
+        'warranty_expired_on' => Date.parse(warranty_expired_on).to_s
+      )
+      expect(status).to eq 201
+    end
+  end
 
   # put 'hits/:id' do
   #   let(:hits) { create(:hits, title: 'Ruby on Rails', owner_id: owner_id) }

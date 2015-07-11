@@ -21,17 +21,14 @@ class HardwaresController < ApplicationController
   end
 
   # POST /hardwares
-  # POST /hardwares.json
   def create
     @hardware = Hardware.new(hardware_params)
 
     respond_to do |format|
       if @hardware.save
-        format.html { redirect_to @hardware, notice: 'Hardware was successfully created.' }
-        format.json { render :show, status: :created, location: @hardware }
+        redirect_to @hardware, notice: 'Hardware was successfully created.'
       else
-        format.html { render :new }
-        format.json { render json: @hardware.errors, status: :unprocessable_entity }
+        render :new
       end
     end
   end

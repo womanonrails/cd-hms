@@ -9,4 +9,19 @@ class Api::HardwaresController < ApplicationController
   def show
     @hardware = Hardware.find(params[:id])
   end
+
+  def create
+    @hardware = Hardware.new(hardware_params)
+    @hardware.save
+    respond_with @hardware
+  end
+
+  private
+
+  def hardware_params
+    params.require(:hardware).permit(
+      :name, :length, :width, :height, :weight, :serial_number, :price,
+      :status, :note, :warranty_expired_on
+    )
+  end
 end
