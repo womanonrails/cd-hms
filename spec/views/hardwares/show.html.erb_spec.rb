@@ -10,7 +10,7 @@ RSpec.describe "hardwares/show", type: :view do
       :weight => 1.5,
       :serial_number => "Serial Number",
       :price => 1.5,
-      :status => 1,
+      :state => 1,
       :note => "MyText"
     ))
   end

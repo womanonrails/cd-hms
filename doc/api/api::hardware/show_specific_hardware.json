@@ -1,0 +1,104 @@
+{
+  "resource": "Api::Hardware",
+  "http_method": "GET",
+  "route": "api/hardwares/:id",
+  "description": "Show specific hardware",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "id",
+      "description": "Id of hardware"
+    }
+  ],
+  "response_fields": [
+    {
+      "Type": "Uuid",
+      "name": "id",
+      "description": "Id of hardware"
+    },
+    {
+      "Type": "String",
+      "name": "name",
+      "description": "Name of hardware"
+    },
+    {
+      "Type": "Float",
+      "name": "length",
+      "description": "Length of hardware"
+    },
+    {
+      "Type": "Float",
+      "name": "width",
+      "description": "Width of hardware"
+    },
+    {
+      "Type": "Float",
+      "name": "height",
+      "description": "Height of hardware"
+    },
+    {
+      "Type": "Float",
+      "name": "weight",
+      "description": "Weight of hardware"
+    },
+    {
+      "Type": "String",
+      "name": "serial_number",
+      "description": "Hardware serial number"
+    },
+    {
+      "Type": "Float",
+      "name": "price",
+      "description": "Price of hardware"
+    },
+    {
+      "Type": "String",
+      "name": "state",
+      "description": "Status of hardware"
+    },
+    {
+      "Type": "Text",
+      "name": "note",
+      "description": "Notes about hardware"
+    },
+    {
+      "Type": "Date",
+      "name": "warranty_expired_on",
+      "description": "Hardware warranty expired date"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "api/hardwares/a70bf0ab-e6ab-4408-a40f-afdde2744f6d",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Token token=\"35809e414b3c523f14f10e6b0f51c1763e2b9e98ec432408c8dcaa1a77a43534b928f05f3494278cc3ec598674877620f962f90770f9298fe1e80aa1422150f8\"",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"hardware\":{\"id\":\"a70bf0ab-e6ab-4408-a40f-afdde2744f6d\",\"name\":\"Computer\",\"length\":120.0,\"width\":90.0,\"height\":70.0,\"weight\":12.0,\"price\":1200.0,\"note\":null,\"warranty_expired_on\":\"2015-07-11\"}}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"27988447b4753fde5b9806c451e1b649\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "8d7e2c9b-0400-4b2c-9fe5-1658637813f1",
+        "X-Runtime": "0.010234",
+        "Content-Length": "194"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:3000api/hardwares/a70bf0ab-e6ab-4408-a40f-afdde2744f6d\" -X GET \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Token token=\\\"35809e414b3c523f14f10e6b0f51c1763e2b9e98ec432408c8dcaa1a77a43534b928f05f3494278cc3ec598674877620f962f90770f9298fe1e80aa1422150f8\\\"\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}

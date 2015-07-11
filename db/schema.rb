@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150706144110) do
+ActiveRecord::Schema.define(version: 20150711154525) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20150706144110) do
     t.float    "weight"
     t.string   "serial_number"
     t.float    "price"
-    t.integer  "status"
+    t.integer  "state"
     t.text     "note"
     t.date     "warranty_expired_on"
     t.datetime "created_at",          null: false

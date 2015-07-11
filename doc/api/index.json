@@ -1,0 +1,34 @@
+{
+  "resources": [
+    {
+      "name": "Api::Hardware",
+      "examples": [
+        {
+          "description": "Creating a hardware",
+          "link": "api::hardware/creating_a_hardware.json",
+          "groups": "all"
+        },
+        {
+          "description": "Listing all hardwares",
+          "link": "api::hardware/listing_all_hardwares.json",
+          "groups": "all"
+        },
+        {
+          "description": "Show specific hardware",
+          "link": "api::hardware/show_specific_hardware.json",
+          "groups": "all"
+        },
+        {
+          "description": "Updating a hardware",
+          "link": "api::hardware/updating_a_hardware.json",
+          "groups": "all"
+        },
+        {
+          "description": "Updating a hardware",
+          "link": "api::hardware/updating_a_hardware.json",
+          "groups": "all"
+        }
+      ]
+    }
+  ]
+}

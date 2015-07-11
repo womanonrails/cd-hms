@@ -1,0 +1,153 @@
+Listing all hardwares
+---------------------
+
+Request:
+  GET api/hardwares
+  Accept: application/vnd.api+json
+  Authorization: Token token="35809e414b3c523f14f10e6b0f51c1763e2b9e98ec432408c8dcaa1a77a43534b928f05f3494278cc3ec598674877620f962f90770f9298fe1e80aa1422150f8"
+  Content-Type: application/vnd.api+json
+  Cookie: 
+  Host: example.org
+
+Response:
+  Status: 200 OK
+  Cache-Control: max-age=0, private, must-revalidate
+  Content-Length: 197
+  Content-Type: application/json; charset=utf-8
+  ETag: W/"2bddd77a650276b16ea925eef4ab572c"
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  X-Request-Id: c914c2b3-9660-43c5-8607-a6dce10f2db3
+  X-Runtime: 0.025616
+  X-XSS-Protection: 1; mode=block
+
+  {"hardwares":[{"id":"9b1bb83c-5a9a-401e-8b46-7e3ca52a5d97","name":"Computer","length":120.0,"width":90.0,"height":70.0,"weight":12.0,"price":1200.0,"note":null,"warranty_expired_on":"2015-07-11"}]}
+
+
+Show specific hardware
+----------------------
+
+Parameters:
+  * id - Id of hardware
+
+Request:
+  GET api/hardwares/a70bf0ab-e6ab-4408-a40f-afdde2744f6d
+  Accept: application/vnd.api+json
+  Authorization: Token token="35809e414b3c523f14f10e6b0f51c1763e2b9e98ec432408c8dcaa1a77a43534b928f05f3494278cc3ec598674877620f962f90770f9298fe1e80aa1422150f8"
+  Content-Type: application/vnd.api+json
+  Cookie: 
+  Host: example.org
+
+Response:
+  Status: 200 OK
+  Cache-Control: max-age=0, private, must-revalidate
+  Content-Length: 194
+  Content-Type: application/json; charset=utf-8
+  ETag: W/"27988447b4753fde5b9806c451e1b649"
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  X-Request-Id: 8d7e2c9b-0400-4b2c-9fe5-1658637813f1
+  X-Runtime: 0.010234
+  X-XSS-Protection: 1; mode=block
+
+  {"hardware":{"id":"a70bf0ab-e6ab-4408-a40f-afdde2744f6d","name":"Computer","length":120.0,"width":90.0,"height":70.0,"weight":12.0,"price":1200.0,"note":null,"warranty_expired_on":"2015-07-11"}}
+
+
+Creating a hardware
+-------------------
+
+Parameters:
+  * name - Name of hardware
+  * length - Length of hardware
+  * width - Width of hardware
+  * height - Height of hardware
+  * weight - Weight of hardware
+  * serial_number - Hardware serial number
+  * price - Price of hardware
+  * state - Status of hardware
+  * note - Notes about hardware
+  * warranty_expired_on - Hardware warranty expired date
+
+Request:
+  POST api/hardwares
+  Accept: application/vnd.api+json
+  Authorization: Token token="35809e414b3c523f14f10e6b0f51c1763e2b9e98ec432408c8dcaa1a77a43534b928f05f3494278cc3ec598674877620f962f90770f9298fe1e80aa1422150f8"
+  Content-Type: application/vnd.api+json
+  Cookie: 
+  Host: example.org
+
+  {"hardware":{"name":"Computer","length":120.0,"state":"available","warranty_expired_on":"2015-07-11 18:27:49 +0200"}}
+
+Response:
+  Status: 201 Created
+  Cache-Control: max-age=0, private, must-revalidate
+  Content-Length: 313
+  Content-Type: application/json; charset=utf-8
+  ETag: W/"afdbde008e7ef1b94afce0a23267fd53"
+  Location: http://example.org/hardwares/ce46b876-0c9a-4f9a-8eca-a280854ab868
+  Set-Cookie: request_method=POST; path=/
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  X-Request-Id: da9fda74-6c09-4ca1-9d2d-6ec3c56f8f03
+  X-Runtime: 0.009821
+  X-XSS-Protection: 1; mode=block
+
+  {"hardware":{"id":"ce46b876-0c9a-4f9a-8eca-a280854ab868","name":"Computer","length":120.0,"width":null,"height":null,"weight":null,"serial_number":null,"price":null,"state":"available","note":null,"warranty_expired_on":"2015-07-11","created_at":"2015-07-11T16:27:49.982Z","updated_at":"2015-07-11T16:27:49.982Z"}}
+
+
+Updating a hardware
+-------------------
+
+Parameters:
+  * name - Name of hardware
+  * length - Length of hardware
+  * width - Width of hardware
+  * height - Height of hardware
+  * weight - Weight of hardware
+  * serial_number - Hardware serial number
+  * price - Price of hardware
+  * state - Status of hardware
+  * note - Notes about hardware
+  * warranty_expired_on - Hardware warranty expired date
+
+Request:
+  PUT api/hardwares/a331091a-d0fa-440c-9e5f-9461165d7a18
+  Accept: application/vnd.api+json
+  Authorization: Token token="35809e414b3c523f14f10e6b0f51c1763e2b9e98ec432408c8dcaa1a77a43534b928f05f3494278cc3ec598674877620f962f90770f9298fe1e80aa1422150f8"
+  Content-Type: application/vnd.api+json
+  Cookie: 
+  Host: example.org
+
+  {"hardware":{"name":"New Computer"}}
+
+Response:
+  Status: 204 No Content
+  Cache-Control: no-cache
+  Set-Cookie: request_method=PUT; path=/
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  X-Request-Id: dd4c7519-98eb-4df3-9901-77dcb5dc6cc2
+  X-Runtime: 0.008195
+  X-XSS-Protection: 1; mode=block
+
+
+Updating a hardware
+-------------------
+
+Request:
+  DELETE api/hardwares/1b145cca-61c3-4e74-aed1-cfa810a2babc
+  Accept: application/vnd.api+json
+  Authorization: Token token="35809e414b3c523f14f10e6b0f51c1763e2b9e98ec432408c8dcaa1a77a43534b928f05f3494278cc3ec598674877620f962f90770f9298fe1e80aa1422150f8"
+  Content-Type: application/vnd.api+json
+  Cookie: 
+  Host: example.org
+
+Response:
+  Status: 204 No Content
+  Cache-Control: no-cache
+  Set-Cookie: request_method=DELETE; path=/
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  X-Request-Id: 6f2b1dc6-09c5-4130-9c4b-6aba47388625
+  X-Runtime: 0.006142
+  X-XSS-Protection: 1; mode=block
