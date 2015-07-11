@@ -1,6 +1,7 @@
 class Api::HardwaresController < ApplicationController
   respond_to :json
   skip_before_filter :authenticate_user!
+  before_action :authenticate_with_token
   before_action :set_hardware, only: [:show, :update, :destroy]
 
   def index

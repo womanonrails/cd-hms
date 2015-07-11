@@ -3,6 +3,7 @@ require 'acceptance_helper'
 resource 'Api::Hardware' do
   header 'Accept', 'application/vnd.api+json'
   header 'Content-Type', 'application/vnd.api+json'
+  header 'Authorization', encoded_service_token
 
   response_field :id, 'Id of hardware', 'Type' => 'Uuid'
   response_field :name, 'Name of hardware', 'Type' => 'String'
