@@ -1,6 +1,7 @@
 class Api::HardwaresController < ApplicationController
   respond_to :json
   skip_before_filter :authenticate_user!
+  before_action :set_hardware, only: [:show, :update, :destroy]
 
   def index
     @hardwares = Hardware.all
@@ -22,7 +23,17 @@ class Api::HardwaresController < ApplicationController
     respond_with @hardware
   end
 
+  def destroy
+    @hardware = Hardware.find(params[:id])
+    @hardware.destroy
+    respond_with @hardware
+  end
+
   private
+
+  def set_hardware
+    @hardware = Hardware.find(params[:id])
+  end
 
   def hardware_params
     params.require(:hardware).permit(

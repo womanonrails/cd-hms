@@ -24,23 +24,19 @@ class HardwaresController < ApplicationController
   def create
     @hardware = Hardware.new(hardware_params)
 
-    respond_to do |format|
-      if @hardware.save
-        redirect_to @hardware, notice: 'Hardware was successfully created.'
-      else
-        render :new
-      end
+    if @hardware.save
+      redirect_to @hardware, notice: 'Hardware was successfully created.'
+    else
+      render :new
     end
   end
 
   # PATCH/PUT /hardwares/1
   def update
-    respond_to do |format|
-      if @hardware.update(hardware_params)
-        redirect_to @hardware, notice: 'Hardware was successfully updated.'
-      else
-        render :edit
-      end
+    if @hardware.update(hardware_params)
+      redirect_to @hardware, notice: 'Hardware was successfully updated.'
+    else
+      render :edit
     end
   end
 
@@ -48,20 +44,19 @@ class HardwaresController < ApplicationController
   # DELETE /hardwares/1.json
   def destroy
     @hardware.destroy
-    respond_to do |format|
-      format.html { redirect_to hardwares_url, notice: 'Hardware was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_to hardwares_url, notice: 'Hardware was successfully destroyed.'
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_hardware
-      @hardware = Hardware.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def hardware_params
-      params.require(:hardware).permit(:name, :length, :width, :height, :weight, :serial_number, :price, :status, :note, :warranty_expired_on)
-    end
+  def set_hardware
+    @hardware = Hardware.find(params[:id])
+  end
+
+  def hardware_params
+    params.require(:hardware).permit(
+      :name, :length, :width, :height, :weight, :serial_number, :price,
+      :status, :note, :warranty_expired_on
+    )
+  end
 end

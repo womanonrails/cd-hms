@@ -122,4 +122,13 @@ resource 'Api::Hardware' do
       expect(status).to eq 204
     end
   end
+
+  delete 'api/hardwares/:id' do
+    let(:hardware) { create(:hardware) }
+    let(:id) { hardware.id }
+
+    example_request 'Updating a hardware' do
+      expect(status).to eq 204
+    end
+  end
 end
