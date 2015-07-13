@@ -9,4 +9,5 @@ Apitome.setup do |config|
   config.js_override = nil
   config.readme = '../api.md'
   config.single_page = true
-end unless Rails.env.production?
+end
+# unless Rails.env.production?
