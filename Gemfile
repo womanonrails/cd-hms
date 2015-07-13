@@ -11,12 +11,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'pg'
 gem 'puma'
 
+gem 'apitome'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'rspec-rails', '~> 3.0'
-  gem 'apitome'
   gem 'rspec_api_documentation'
   gem 'dotenv-rails'
   gem 'pry-rails'
