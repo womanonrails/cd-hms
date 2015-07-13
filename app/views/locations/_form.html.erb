@@ -1,13 +1,12 @@
-<%= simple_form_for(@location) do |f| %>
-  <%= f.error_notification %>
+<%= simple_form_for @location, html: { class: 'form-horizontal' } do |f| %>
+  <%= f.input :name, required: true %>
+  <%= error_span(@location[:name]) %>
+  <%= f.input :address, required: true %>
+  <%= error_span(@location[:address]) %>
+  <%= f.input :url, type: :url %>
+  <%= error_span(@location[:url]) %>
 
-  <div class="form-inputs">
-    <%= f.input :name %>
-    <%= f.input :address %>
-    <%= f.input :url %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
+  <%= f.button :submit, class: 'btn-primary' %>
+  <%= link_to t('.cancel', default: t("helpers.links.cancel")),
+                locations_path, class: 'btn btn-default' %>
 <% end %>

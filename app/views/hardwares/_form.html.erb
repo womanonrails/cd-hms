@@ -1,5 +1,5 @@
 <%= simple_form_for @hardware, :html => { :class => 'form-horizontal' } do |f| %>
-  <%= f.input :name %>
+  <%= f.input :name, required: true %>
   <%= error_span(@hardware[:name]) %>
   <%= f.input :length %>
   <%= error_span(@hardware[:length]) %>

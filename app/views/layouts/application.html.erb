@@ -28,8 +28,7 @@
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
             <li><%= link_to t('hardwares'), hardwares_path %></li>
-            <li><%= link_to "Link2", "/path2"  %></li>
-            <li><%= link_to "Link3", "/path3"  %></li>
+            <li><%= link_to t('locations'), locations_path %></li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
@@ -52,7 +51,7 @@
       </div><!--/row-->
 
       <footer>
-        <p>&copy; CoderDojo <%= Time.now.year %></p>
+        <p>CoderDojo <%= Time.now.year %></p>
       </footer>
 
     </div> <!-- /container -->
