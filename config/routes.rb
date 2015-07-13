@@ -9,10 +9,9 @@ Rails.application.routes.draw do
   end
 
   resources :hardwares
-
+  resources :locations
   namespace :api do
     resources :hardwares, except: [:new, :edit], defaults: { format: 'json' }
   end
-
   root 'welcome#index'
 end
