@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   end
 
   resources :hardwares
+  resources :locations
   root 'welcome#index'
 end
