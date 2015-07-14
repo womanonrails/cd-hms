@@ -4,7 +4,7 @@ class HardwaresController < ApplicationController
 
   # GET /hardwares
   def index
-    @hardwares = Hardware.all
+    @hardwares = HardwareDecorator.decorate_collection(Hardware.all)
   end
 
   # GET /hardwares/1
@@ -52,7 +52,7 @@ class HardwaresController < ApplicationController
   private
 
   def set_hardware
-    @hardware = Hardware.find(params[:id])
+    @hardware = Hardware.find(params[:id]).decorate
   end
 
   def hardware_params

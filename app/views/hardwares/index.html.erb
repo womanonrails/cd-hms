@@ -16,13 +16,7 @@
       <tr>
         <td><%= link_to hardware.name, hardware_path(hardware) %></td>
         <td><span class="label label-default"><%= hardware.state %></span></td>
-        <td>
-          <% if hardware.location %>
-            <%= link_to hardware.location.name, location_path(hardware.location) %>
-          <% else %>
-            --
-          <% end %>
-        </td>
+        <td><%= hardware.location_link %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_hardware_path(hardware), :class => 'btn btn-default btn-xs' %>
