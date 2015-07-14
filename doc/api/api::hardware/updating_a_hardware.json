@@ -59,6 +59,11 @@
       "description": "Notes about hardware"
     },
     {
+      "Type": "Uuid",
+      "name": "location_id",
+      "description": "Id of hardware location"
+    },
+    {
       "Type": "Date",
       "name": "warranty_expired_on",
       "description": "Hardware warranty expired date"
@@ -67,7 +72,7 @@
   "requests": [
     {
       "request_method": "DELETE",
-      "request_path": "api/hardwares/1b145cca-61c3-4e74-aed1-cfa810a2babc",
+      "request_path": "api/hardwares/57412063-be07-4a6f-8e4c-68016ca98c06",
       "request_body": null,
       "request_headers": {
         "Accept": "application/vnd.api+json",
@@ -88,11 +93,11 @@
         "X-Content-Type-Options": "nosniff",
         "Cache-Control": "no-cache",
         "Set-Cookie": "request_method=DELETE; path=/",
-        "X-Request-Id": "6f2b1dc6-09c5-4130-9c4b-6aba47388625",
-        "X-Runtime": "0.006142"
+        "X-Request-Id": "b99353b3-ae86-46b8-b072-2c984e344bc8",
+        "X-Runtime": "0.013061"
       },
       "response_content_type": null,
-      "curl": "curl \"http://localhost:3000api/hardwares/1b145cca-61c3-4e74-aed1-cfa810a2babc\" -d '' -X DELETE \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Token token=\\\"35809e414b3c523f14f10e6b0f51c1763e2b9e98ec432408c8dcaa1a77a43534b928f05f3494278cc3ec598674877620f962f90770f9298fe1e80aa1422150f8\\\"\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+      "curl": "curl \"http://localhost:3000api/hardwares/57412063-be07-4a6f-8e4c-68016ca98c06\" -d '' -X DELETE \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Token token=\\\"35809e414b3c523f14f10e6b0f51c1763e2b9e98ec432408c8dcaa1a77a43534b928f05f3494278cc3ec598674877620f962f90770f9298fe1e80aa1422150f8\\\"\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
     }
   ]
 }

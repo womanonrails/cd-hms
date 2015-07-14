@@ -15,6 +15,7 @@ resource 'Api::Hardware' do
   response_field :price, 'Price of hardware', 'Type' => 'Float'
   response_field :state, 'Status of hardware', 'Type' => 'String'
   response_field :note, 'Notes about hardware', 'Type' => 'Text'
+  response_field :location_id, 'Id of hardware location', 'Type' => 'Uuid'
   response_field :warranty_expired_on, 'Hardware warranty expired date', 'Type' => 'Date'
 
   get 'api/hardwares' do
@@ -44,9 +45,11 @@ resource 'Api::Hardware' do
     let(:id) { hardware.id }
     let(:hardware) do
       create(:hardware,
-             name: 'Computer', length: 120, warranty_expired_on: Time.now
+             name: 'Computer', length: 120, warranty_expired_on: Time.now,
+             location: location
             )
     end
+    let(:location) { create(:location) }
 
     example 'Show specific hardware' do
       do_request
@@ -54,6 +57,7 @@ resource 'Api::Hardware' do
       expect(status).to eq 200
       expect(data.slice('name')).to eq('name' => hardware.name)
       expect(data.slice('length')).to eq('length' => hardware.length)
+      expect(data.slice('location_id')).to eq('location_id' => location.id)
     end
   end
 
