@@ -59,6 +59,11 @@
       "description": "Notes about hardware"
     },
     {
+      "Type": "Uuid",
+      "name": "location_id",
+      "description": "Id of hardware location"
+    },
+    {
       "Type": "Date",
       "name": "warranty_expired_on",
       "description": "Hardware warranty expired date"
@@ -81,17 +86,17 @@
       "request_content_type": "application/vnd.api+json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"hardwares\":[{\"id\":\"9b1bb83c-5a9a-401e-8b46-7e3ca52a5d97\",\"name\":\"Computer\",\"length\":120.0,\"width\":90.0,\"height\":70.0,\"weight\":12.0,\"price\":1200.0,\"note\":null,\"warranty_expired_on\":\"2015-07-11\"}]}",
+      "response_body": "{\"hardwares\":[{\"id\":\"5699a74d-4cba-408e-b2f0-2d706f8db656\",\"name\":\"Computer\",\"length\":120.0,\"width\":90.0,\"height\":70.0,\"weight\":12.0,\"price\":1200.0,\"note\":null,\"warranty_expired_on\":\"2015-07-14\",\"location_id\":null}]}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"2bddd77a650276b16ea925eef4ab572c\"",
+        "ETag": "W/\"d762ef940e32360bfa296f40a2034fdf\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "c914c2b3-9660-43c5-8607-a6dce10f2db3",
-        "X-Runtime": "0.025616",
-        "Content-Length": "197"
+        "X-Request-Id": "3486344f-6bc3-434b-9e97-d90f7c54e01d",
+        "X-Runtime": "0.026562",
+        "Content-Length": "216"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": "curl \"http://localhost:3000api/hardwares\" -X GET \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Token token=\\\"35809e414b3c523f14f10e6b0f51c1763e2b9e98ec432408c8dcaa1a77a43534b928f05f3494278cc3ec598674877620f962f90770f9298fe1e80aa1422150f8\\\"\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""

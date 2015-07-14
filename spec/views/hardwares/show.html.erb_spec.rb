@@ -12,7 +12,7 @@ RSpec.describe "hardwares/show", type: :view do
       :price => 1.5,
       :state => 1,
       :note => "MyText"
-    ))
+    ).decorate)
   end
 
   it "renders attributes in <p>" do

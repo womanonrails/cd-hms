@@ -295,6 +295,14 @@ table th, table td {
               </tr>
               <tr>
                 <td>
+                    <span class="name">location_id</span>
+                </td>
+                <td>
+                  <span class="description">Id of hardware location</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
                     <span class="name">warranty_expired_on</span>
                 </td>
                 <td>
@@ -318,10 +326,10 @@ Cookie: </pre>
 
 
             <h4>Body</h4>
-            <pre class="request body">{"hardware":{"name":"Computer","length":120.0,"state":"available","warranty_expired_on":"2015-07-11 18:27:49 +0200"}}</pre>
+            <pre class="request body">{"hardware":{"name":"Computer","length":120.0,"state":"available","warranty_expired_on":"2015-07-14 20:14:52 +0200"}}</pre>
 
             <h4>cURL</h4>
-            <pre class="request curl">curl &quot;http://localhost:3000api/hardwares&quot; -d &#39;{&quot;hardware&quot;:{&quot;name&quot;:&quot;Computer&quot;,&quot;length&quot;:120.0,&quot;state&quot;:&quot;available&quot;,&quot;warranty_expired_on&quot;:&quot;2015-07-11 18:27:49 +0200&quot;}}&#39; -X POST \
+            <pre class="request curl">curl &quot;http://localhost:3000api/hardwares&quot; -d &#39;{&quot;hardware&quot;:{&quot;name&quot;:&quot;Computer&quot;,&quot;length&quot;:120.0,&quot;state&quot;:&quot;available&quot;,&quot;warranty_expired_on&quot;:&quot;2015-07-14 20:14:52 +0200&quot;}}&#39; -X POST \
 	-H &quot;Accept: application/vnd.api+json&quot; \
 	-H &quot;Content-Type: application/vnd.api+json&quot; \
 	-H &quot;Authorization: Token token=\&quot;35809e414b3c523f14f10e6b0f51c1763e2b9e98ec432408c8dcaa1a77a43534b928f05f3494278cc3ec598674877620f962f90770f9298fe1e80aa1422150f8\&quot;&quot; \
@@ -333,18 +341,18 @@ Cookie: </pre>
               <pre class="response headers">X-Frame-Options: SAMEORIGIN
 X-XSS-Protection: 1; mode=block
 X-Content-Type-Options: nosniff
-Location: http://example.org/hardwares/ce46b876-0c9a-4f9a-8eca-a280854ab868
+Location: http://example.org/hardwares/f458db44-3546-48c1-a4f9-e05e25de8ee7
 Content-Type: application/json; charset=utf-8
-ETag: W/&quot;afdbde008e7ef1b94afce0a23267fd53&quot;
+ETag: W/&quot;f46756a1207abde0ae80709a55ef5a61&quot;
 Cache-Control: max-age=0, private, must-revalidate
 Set-Cookie: request_method=POST; path=/
-X-Request-Id: da9fda74-6c09-4ca1-9d2d-6ec3c56f8f03
-X-Runtime: 0.009821
-Content-Length: 313</pre>
+X-Request-Id: 135b30bc-f621-4ceb-b9e3-1e0150f7c059
+X-Runtime: 0.013366
+Content-Length: 332</pre>
             <h4>Status</h4>
             <pre class="response status">201 Created</pre>
               <h4>Body</h4>
-              <pre class="response body">{&quot;hardware&quot;:{&quot;id&quot;:&quot;ce46b876-0c9a-4f9a-8eca-a280854ab868&quot;,&quot;name&quot;:&quot;Computer&quot;,&quot;length&quot;:120.0,&quot;width&quot;:null,&quot;height&quot;:null,&quot;weight&quot;:null,&quot;serial_number&quot;:null,&quot;price&quot;:null,&quot;state&quot;:&quot;available&quot;,&quot;note&quot;:null,&quot;warranty_expired_on&quot;:&quot;2015-07-11&quot;,&quot;created_at&quot;:&quot;2015-07-11T16:27:49.982Z&quot;,&quot;updated_at&quot;:&quot;2015-07-11T16:27:49.982Z&quot;}}</pre>
+              <pre class="response body">{&quot;hardware&quot;:{&quot;id&quot;:&quot;f458db44-3546-48c1-a4f9-e05e25de8ee7&quot;,&quot;name&quot;:&quot;Computer&quot;,&quot;length&quot;:120.0,&quot;width&quot;:null,&quot;height&quot;:null,&quot;weight&quot;:null,&quot;serial_number&quot;:null,&quot;price&quot;:null,&quot;state&quot;:&quot;available&quot;,&quot;note&quot;:null,&quot;warranty_expired_on&quot;:&quot;2015-07-14&quot;,&quot;created_at&quot;:&quot;2015-07-14T18:14:52.370Z&quot;,&quot;updated_at&quot;:&quot;2015-07-14T18:14:52.370Z&quot;,&quot;location_id&quot;:null}}</pre>
       </div>
     </div>
   </body>

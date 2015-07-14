@@ -1,0 +1,79 @@
+{
+  "resource": "Api::Location",
+  "http_method": "POST",
+  "route": "api/locations",
+  "description": "Creating a location",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "name",
+      "description": "Name of location"
+    },
+    {
+      "name": "address",
+      "description": "Address of location"
+    },
+    {
+      "name": "url",
+      "description": "Url of location"
+    }
+  ],
+  "response_fields": [
+    {
+      "Type": "Uuid",
+      "name": "id",
+      "description": "Id of location"
+    },
+    {
+      "Type": "String",
+      "name": "name",
+      "description": "Name of location"
+    },
+    {
+      "Type": "Text",
+      "name": "address",
+      "description": "Location address"
+    },
+    {
+      "Type": "String",
+      "name": "url",
+      "description": "Location url"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "api/locations",
+      "request_body": "{\"location\":{\"name\":\"Paris\",\"address\":\"France\",\"url\":\"http://www.toureiffel.paris/\"}}",
+      "request_headers": {
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Token token=\"35809e414b3c523f14f10e6b0f51c1763e2b9e98ec432408c8dcaa1a77a43534b928f05f3494278cc3ec598674877620f962f90770f9298fe1e80aa1422150f8\"",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\"location\":{\"id\":\"5093e4ba-f176-4732-8851-0c8cadf81399\",\"name\":\"Paris\",\"address\":\"France\",\"url\":\"http://www.toureiffel.paris/\",\"created_at\":\"2015-07-14T18:14:52.446Z\",\"updated_at\":\"2015-07-14T18:14:52.446Z\"}}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Location": "http://example.org/locations/5093e4ba-f176-4732-8851-0c8cadf81399",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"a5330d3fac3160a9982531e7118154aa\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "Set-Cookie": "request_method=POST; path=/",
+        "X-Request-Id": "8ad92761-7feb-4678-b352-ddce2194cde0",
+        "X-Runtime": "0.007166",
+        "Content-Length": "209"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:3000api/locations\" -d '{\"location\":{\"name\":\"Paris\",\"address\":\"France\",\"url\":\"http://www.toureiffel.paris/\"}}' -X POST \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Token token=\\\"35809e414b3c523f14f10e6b0f51c1763e2b9e98ec432408c8dcaa1a77a43534b928f05f3494278cc3ec598674877620f962f90770f9298fe1e80aa1422150f8\\\"\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}

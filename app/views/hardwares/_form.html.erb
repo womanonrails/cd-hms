@@ -19,6 +19,8 @@
   <%= error_span(@hardware[:note]) %>
   <%= f.input :warranty_expired_on %>
   <%= error_span(@hardware[:warranty_expired_on]) %>
+  <%= f.input :location_id, collection: @locations, required: true %>
+  <%= error_span(@hardware[:location]) %>
 
   <%= f.button :submit, :class => 'btn-primary' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
