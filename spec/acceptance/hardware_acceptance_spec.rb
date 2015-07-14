@@ -90,6 +90,7 @@ resource 'Api::Hardware' do
         'serial_number' => nil,
         'price' => nil,
         'note' => nil,
+        'location_id' => nil,
         'warranty_expired_on' => Date.parse(warranty_expired_on).to_s
       )
       expect(status).to eq 201

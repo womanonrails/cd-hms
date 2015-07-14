@@ -14,10 +14,12 @@ class HardwaresController < ApplicationController
   # GET /hardwares/new
   def new
     @hardware = Hardware.new
+    @locations = Location.all
   end
 
   # GET /hardwares/1/edit
   def edit
+    @locations = Location.all
   end
 
   # POST /hardwares
@@ -56,7 +58,7 @@ class HardwaresController < ApplicationController
   def hardware_params
     params.require(:hardware).permit(
       :name, :length, :width, :height, :weight, :serial_number, :price,
-      :status, :note, :warranty_expired_on
+      :status, :note, :warranty_expired_on, :location_id
     )
   end
 end
