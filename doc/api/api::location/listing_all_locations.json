@@ -1,0 +1,65 @@
+{
+  "resource": "Api::Location",
+  "http_method": "GET",
+  "route": "api/locations",
+  "description": "Listing all locations",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+    {
+      "Type": "Uuid",
+      "name": "id",
+      "description": "Id of location"
+    },
+    {
+      "Type": "String",
+      "name": "name",
+      "description": "Name of location"
+    },
+    {
+      "Type": "Text",
+      "name": "address",
+      "description": "Location address"
+    },
+    {
+      "Type": "String",
+      "name": "url",
+      "description": "Location url"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "api/locations",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Token token=\"35809e414b3c523f14f10e6b0f51c1763e2b9e98ec432408c8dcaa1a77a43534b928f05f3494278cc3ec598674877620f962f90770f9298fe1e80aa1422150f8\"",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"locations\":[{\"id\":\"35dde0c6-ec00-40c9-b967-72bc0a667035\",\"name\":\"Eiffel Tower\",\"address\":\"Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France\",\"url\":\"http://www.toureiffel.paris/\"}]}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"b9d0b57f744cb9b8447a563130555aa9\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "fc2ec080-275d-4e3e-a6b7-e8e9ec51d094",
+        "X-Runtime": "0.007923",
+        "Content-Length": "192"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:3000api/locations\" -X GET \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Token token=\\\"35809e414b3c523f14f10e6b0f51c1763e2b9e98ec432408c8dcaa1a77a43534b928f05f3494278cc3ec598674877620f962f90770f9298fe1e80aa1422150f8\\\"\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}
