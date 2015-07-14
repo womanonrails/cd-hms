@@ -1,5 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Location, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it 'after destroy leave connected hardware' do
+    location = create(:location)
+    create(:hardware, location: location)
+    expect{ location.destroy }.to_not change{ Location.count }
+  end
 end
