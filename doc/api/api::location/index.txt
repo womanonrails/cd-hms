@@ -1,8 +1,8 @@
-Listing all hardwares
+Listing all locations
 ---------------------
 
 Request:
-  GET api/hardwares
+  GET api/locations
   Accept: application/vnd.api+json
   Authorization: Token token="35809e414b3c523f14f10e6b0f51c1763e2b9e98ec432408c8dcaa1a77a43534b928f05f3494278cc3ec598674877620f962f90770f9298fe1e80aa1422150f8"
   Content-Type: application/vnd.api+json
@@ -12,26 +12,26 @@ Request:
 Response:
   Status: 200 OK
   Cache-Control: max-age=0, private, must-revalidate
-  Content-Length: 216
+  Content-Length: 192
   Content-Type: application/json; charset=utf-8
-  ETag: W/"d762ef940e32360bfa296f40a2034fdf"
+  ETag: W/"b9d0b57f744cb9b8447a563130555aa9"
   X-Content-Type-Options: nosniff
   X-Frame-Options: SAMEORIGIN
-  X-Request-Id: 3486344f-6bc3-434b-9e97-d90f7c54e01d
-  X-Runtime: 0.026562
+  X-Request-Id: fc2ec080-275d-4e3e-a6b7-e8e9ec51d094
+  X-Runtime: 0.007923
   X-XSS-Protection: 1; mode=block
 
-  {"hardwares":[{"id":"5699a74d-4cba-408e-b2f0-2d706f8db656","name":"Computer","length":120.0,"width":90.0,"height":70.0,"weight":12.0,"price":1200.0,"note":null,"warranty_expired_on":"2015-07-14","location_id":null}]}
+  {"locations":[{"id":"35dde0c6-ec00-40c9-b967-72bc0a667035","name":"Eiffel Tower","address":"Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France","url":"http://www.toureiffel.paris/"}]}
 
 
-Show specific hardware
+Show specific location
 ----------------------
 
 Parameters:
-  * id - Id of hardware
+  * id - Id of location
 
 Request:
-  GET api/hardwares/f90b9925-7acb-4e5d-a18e-76318132e9b5
+  GET api/locations/5affa5d4-afcb-4e8e-af9e-72b926cec76c
   Accept: application/vnd.api+json
   Authorization: Token token="35809e414b3c523f14f10e6b0f51c1763e2b9e98ec432408c8dcaa1a77a43534b928f05f3494278cc3ec598674877620f962f90770f9298fe1e80aa1422150f8"
   Content-Type: application/vnd.api+json
@@ -41,84 +41,70 @@ Request:
 Response:
   Status: 200 OK
   Cache-Control: max-age=0, private, must-revalidate
-  Content-Length: 247
+  Content-Length: 189
   Content-Type: application/json; charset=utf-8
-  ETag: W/"d40163e1f6201fad4de13ee0bdb56071"
+  ETag: W/"d66344757588abc2f7ce3fb3381eba3b"
   X-Content-Type-Options: nosniff
   X-Frame-Options: SAMEORIGIN
-  X-Request-Id: a203c29c-2774-4a08-80ab-327428e9bd73
-  X-Runtime: 0.010807
+  X-Request-Id: 4b5f2dd9-8edc-431a-8035-c5f0c1282c5a
+  X-Runtime: 0.004307
   X-XSS-Protection: 1; mode=block
 
-  {"hardware":{"id":"f90b9925-7acb-4e5d-a18e-76318132e9b5","name":"Computer","length":120.0,"width":90.0,"height":70.0,"weight":12.0,"price":1200.0,"note":null,"warranty_expired_on":"2015-07-14","location_id":"d0d29345-752c-472f-af83-d61389bf84ca"}}
+  {"location":{"id":"5affa5d4-afcb-4e8e-af9e-72b926cec76c","name":"Eiffel Tower","address":"Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France","url":"http://www.toureiffel.paris/"}}
 
 
-Creating a hardware
+Creating a location
 -------------------
 
 Parameters:
-  * name - Name of hardware
-  * length - Length of hardware
-  * width - Width of hardware
-  * height - Height of hardware
-  * weight - Weight of hardware
-  * serial_number - Hardware serial number
-  * price - Price of hardware
-  * state - Status of hardware
-  * note - Notes about hardware
-  * warranty_expired_on - Hardware warranty expired date
+  * name - Name of location
+  * address - Address of location
+  * url - Url of location
 
 Request:
-  POST api/hardwares
+  POST api/locations
   Accept: application/vnd.api+json
   Authorization: Token token="35809e414b3c523f14f10e6b0f51c1763e2b9e98ec432408c8dcaa1a77a43534b928f05f3494278cc3ec598674877620f962f90770f9298fe1e80aa1422150f8"
   Content-Type: application/vnd.api+json
   Cookie: 
   Host: example.org
 
-  {"hardware":{"name":"Computer","length":120.0,"state":"available","warranty_expired_on":"2015-07-14 20:14:52 +0200"}}
+  {"location":{"name":"Paris","address":"France","url":"http://www.toureiffel.paris/"}}
 
 Response:
   Status: 201 Created
   Cache-Control: max-age=0, private, must-revalidate
-  Content-Length: 332
+  Content-Length: 209
   Content-Type: application/json; charset=utf-8
-  ETag: W/"f46756a1207abde0ae80709a55ef5a61"
-  Location: http://example.org/hardwares/f458db44-3546-48c1-a4f9-e05e25de8ee7
+  ETag: W/"a5330d3fac3160a9982531e7118154aa"
+  Location: http://example.org/locations/5093e4ba-f176-4732-8851-0c8cadf81399
   Set-Cookie: request_method=POST; path=/
   X-Content-Type-Options: nosniff
   X-Frame-Options: SAMEORIGIN
-  X-Request-Id: 135b30bc-f621-4ceb-b9e3-1e0150f7c059
-  X-Runtime: 0.013366
+  X-Request-Id: 8ad92761-7feb-4678-b352-ddce2194cde0
+  X-Runtime: 0.007166
   X-XSS-Protection: 1; mode=block
 
-  {"hardware":{"id":"f458db44-3546-48c1-a4f9-e05e25de8ee7","name":"Computer","length":120.0,"width":null,"height":null,"weight":null,"serial_number":null,"price":null,"state":"available","note":null,"warranty_expired_on":"2015-07-14","created_at":"2015-07-14T18:14:52.370Z","updated_at":"2015-07-14T18:14:52.370Z","location_id":null}}
+  {"location":{"id":"5093e4ba-f176-4732-8851-0c8cadf81399","name":"Paris","address":"France","url":"http://www.toureiffel.paris/","created_at":"2015-07-14T18:14:52.446Z","updated_at":"2015-07-14T18:14:52.446Z"}}
 
 
-Updating a hardware
+Updating a location
 -------------------
 
 Parameters:
-  * name - Name of hardware
-  * length - Length of hardware
-  * width - Width of hardware
-  * height - Height of hardware
-  * weight - Weight of hardware
-  * serial_number - Hardware serial number
-  * price - Price of hardware
-  * state - Status of hardware
-  * note - Notes about hardware
-  * warranty_expired_on - Hardware warranty expired date
+  * name - Name of location
+  * address - Address of location
+  * url - Url of location
 
 Request:
-  PUT api/hardwares/b590293e-5717-4376-9062-91b53e4d9f71
+  PUT api/locations/65ba8e90-da7d-46fd-9b74-a32890b6e670
   Accept: application/vnd.api+json
   Authorization: Token token="35809e414b3c523f14f10e6b0f51c1763e2b9e98ec432408c8dcaa1a77a43534b928f05f3494278cc3ec598674877620f962f90770f9298fe1e80aa1422150f8"
   Content-Type: application/vnd.api+json
   Cookie: 
   Host: example.org
 
-  {"hardware":{"name":"New Computer"}}
+  {"location":{"name":"Paris"}}
 
 Response:
   Status: 204 No Content
@@ -126,16 +112,16 @@ Response:
   Set-Cookie: request_method=PUT; path=/
   X-Content-Type-Options: nosniff
   X-Frame-Options: SAMEORIGIN
-  X-Request-Id: 836867c2-8335-44c9-96fa-219eda523959
-  X-Runtime: 0.010688
+  X-Request-Id: 8d0c7f41-a41d-4070-834b-433100fd63b7
+  X-Runtime: 0.010225
   X-XSS-Protection: 1; mode=block
 
 
-Updating a hardware
+Updating a location
 -------------------
 
 Request:
-  DELETE api/hardwares/0fb7a784-f0d2-49fb-8cec-944b66027997
+  DELETE api/locations/50aa18fd-6de5-46e2-a3bd-30ca101eafce
   Accept: application/vnd.api+json
   Authorization: Token token="35809e414b3c523f14f10e6b0f51c1763e2b9e98ec432408c8dcaa1a77a43534b928f05f3494278cc3ec598674877620f962f90770f9298fe1e80aa1422150f8"
   Content-Type: application/vnd.api+json
@@ -148,8 +134,6 @@ Response:
   Set-Cookie: request_method=DELETE; path=/
   X-Content-Type-Options: nosniff
   X-Frame-Options: SAMEORIGIN
-  X-Request-Id: ef2cc5db-6e31-415d-99a0-61a4ebab7a3c
-  X-Runtime: 0.007042
+  X-Request-Id: 0c21f6ef-54a2-4336-86ba-9c4eabb52ece
+  X-Runtime: 0.029522
   X-XSS-Protection: 1; mode=block
-
-

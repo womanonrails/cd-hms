@@ -76,7 +76,7 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "api/hardwares/f94fbaed-5370-4fa7-bce1-d6d8c1a15cfc",
+      "request_path": "api/hardwares/f90b9925-7acb-4e5d-a18e-76318132e9b5",
       "request_body": null,
       "request_headers": {
         "Accept": "application/vnd.api+json",
@@ -90,20 +90,20 @@
       "request_content_type": "application/vnd.api+json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"hardware\":{\"id\":\"f94fbaed-5370-4fa7-bce1-d6d8c1a15cfc\",\"name\":\"Computer\",\"length\":120.0,\"width\":90.0,\"height\":70.0,\"weight\":12.0,\"price\":1200.0,\"note\":null,\"warranty_expired_on\":\"2015-07-14\",\"location_id\":\"4467800a-a92c-4aa3-a05a-7da542d643e5\"}}",
+      "response_body": "{\"hardware\":{\"id\":\"f90b9925-7acb-4e5d-a18e-76318132e9b5\",\"name\":\"Computer\",\"length\":120.0,\"width\":90.0,\"height\":70.0,\"weight\":12.0,\"price\":1200.0,\"note\":null,\"warranty_expired_on\":\"2015-07-14\",\"location_id\":\"d0d29345-752c-472f-af83-d61389bf84ca\"}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"a296c9655e9e262bab7bd7aa460cb473\"",
+        "ETag": "W/\"d40163e1f6201fad4de13ee0bdb56071\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "e2587e8b-e568-4df2-8066-726e24678e1f",
-        "X-Runtime": "0.011580",
+        "X-Request-Id": "a203c29c-2774-4a08-80ab-327428e9bd73",
+        "X-Runtime": "0.010807",
         "Content-Length": "247"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:3000api/hardwares/f94fbaed-5370-4fa7-bce1-d6d8c1a15cfc\" -X GET \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Token token=\\\"35809e414b3c523f14f10e6b0f51c1763e2b9e98ec432408c8dcaa1a77a43534b928f05f3494278cc3ec598674877620f962f90770f9298fe1e80aa1422150f8\\\"\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+      "curl": "curl \"http://localhost:3000api/hardwares/f90b9925-7acb-4e5d-a18e-76318132e9b5\" -X GET \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Token token=\\\"35809e414b3c523f14f10e6b0f51c1763e2b9e98ec432408c8dcaa1a77a43534b928f05f3494278cc3ec598674877620f962f90770f9298fe1e80aa1422150f8\\\"\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
     }
   ]
 }

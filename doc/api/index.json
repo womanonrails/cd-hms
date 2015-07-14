@@ -29,6 +29,36 @@
           "groups": "all"
         }
       ]
+    },
+    {
+      "name": "Api::Location",
+      "examples": [
+        {
+          "description": "Creating a location",
+          "link": "api::location/creating_a_location.json",
+          "groups": "all"
+        },
+        {
+          "description": "Listing all locations",
+          "link": "api::location/listing_all_locations.json",
+          "groups": "all"
+        },
+        {
+          "description": "Show specific location",
+          "link": "api::location/show_specific_location.json",
+          "groups": "all"
+        },
+        {
+          "description": "Updating a location",
+          "link": "api::location/updating_a_location.json",
+          "groups": "all"
+        },
+        {
+          "description": "Updating a location",
+          "link": "api::location/updating_a_location.json",
+          "groups": "all"
+        }
+      ]
     }
   ]
 }

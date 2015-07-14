@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Api::Hardware API</title>
+    <title>Api::Location API</title>
     <meta charset="utf-8">
     <style>
       
@@ -106,11 +106,11 @@ table th, table td {
   </head>
   <body>
     <div class="container">
-      <h1>Api::Hardware API</h1>
+      <h1>Api::Location API</h1>
 
       <div class="article">
-        <h2>Updating a hardware</h2>
-        <h3>DELETE api/hardwares/:id</h3>
+        <h2>Updating a location</h2>
+        <h3>DELETE api/locations/:id</h3>
 
 
           <h3>Response Fields</h3>
@@ -127,7 +127,7 @@ table th, table td {
                     <span class="name">id</span>
                 </td>
                 <td>
-                  <span class="description">Id of hardware</span>
+                  <span class="description">Id of location</span>
                 </td>
               </tr>
               <tr>
@@ -135,87 +135,23 @@ table th, table td {
                     <span class="name">name</span>
                 </td>
                 <td>
-                  <span class="description">Name of hardware</span>
+                  <span class="description">Name of location</span>
                 </td>
               </tr>
               <tr>
                 <td>
-                    <span class="name">length</span>
+                    <span class="name">address</span>
                 </td>
                 <td>
-                  <span class="description">Length of hardware</span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                    <span class="name">width</span>
-                </td>
-                <td>
-                  <span class="description">Width of hardware</span>
+                  <span class="description">Location address</span>
                 </td>
               </tr>
               <tr>
                 <td>
-                    <span class="name">height</span>
+                    <span class="name">url</span>
                 </td>
                 <td>
-                  <span class="description">Height of hardware</span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                    <span class="name">weight</span>
-                </td>
-                <td>
-                  <span class="description">Weight of hardware</span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                    <span class="name">serial_number</span>
-                </td>
-                <td>
-                  <span class="description">Hardware serial number</span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                    <span class="name">price</span>
-                </td>
-                <td>
-                  <span class="description">Price of hardware</span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                    <span class="name">state</span>
-                </td>
-                <td>
-                  <span class="description">Status of hardware</span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                    <span class="name">note</span>
-                </td>
-                <td>
-                  <span class="description">Notes about hardware</span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                    <span class="name">location_id</span>
-                </td>
-                <td>
-                  <span class="description">Id of hardware location</span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                    <span class="name">warranty_expired_on</span>
-                </td>
-                <td>
-                  <span class="description">Hardware warranty expired date</span>
+                  <span class="description">Location url</span>
                 </td>
               </tr>
             </tbody>
@@ -231,12 +167,12 @@ Host: example.org
 Cookie: </pre>
 
           <h4>Route</h4>
-          <pre class="request route highlight">DELETE api/hardwares/0fb7a784-f0d2-49fb-8cec-944b66027997</pre>
+          <pre class="request route highlight">DELETE api/locations/50aa18fd-6de5-46e2-a3bd-30ca101eafce</pre>
 
 
 
             <h4>cURL</h4>
-            <pre class="request curl">curl &quot;http://localhost:3000api/hardwares/0fb7a784-f0d2-49fb-8cec-944b66027997&quot; -d &#39;&#39; -X DELETE \
+            <pre class="request curl">curl &quot;http://localhost:3000api/locations/50aa18fd-6de5-46e2-a3bd-30ca101eafce&quot; -d &#39;&#39; -X DELETE \
 	-H &quot;Accept: application/vnd.api+json&quot; \
 	-H &quot;Content-Type: application/vnd.api+json&quot; \
 	-H &quot;Authorization: Token token=\&quot;35809e414b3c523f14f10e6b0f51c1763e2b9e98ec432408c8dcaa1a77a43534b928f05f3494278cc3ec598674877620f962f90770f9298fe1e80aa1422150f8\&quot;&quot; \
@@ -250,8 +186,8 @@ X-XSS-Protection: 1; mode=block
 X-Content-Type-Options: nosniff
 Cache-Control: no-cache
 Set-Cookie: request_method=DELETE; path=/
-X-Request-Id: ef2cc5db-6e31-415d-99a0-61a4ebab7a3c
-X-Runtime: 0.007042</pre>
+X-Request-Id: 0c21f6ef-54a2-4336-86ba-9c4eabb52ece
+X-Runtime: 0.029522</pre>
             <h4>Status</h4>
             <pre class="response status">204 No Content</pre>
       </div>

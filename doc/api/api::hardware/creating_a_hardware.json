@@ -113,7 +113,7 @@
     {
       "request_method": "POST",
       "request_path": "api/hardwares",
-      "request_body": "{\"hardware\":{\"name\":\"Computer\",\"length\":120.0,\"state\":\"available\",\"warranty_expired_on\":\"2015-07-14 19:05:11 +0200\"}}",
+      "request_body": "{\"hardware\":{\"name\":\"Computer\",\"length\":120.0,\"state\":\"available\",\"warranty_expired_on\":\"2015-07-14 20:14:52 +0200\"}}",
       "request_headers": {
         "Accept": "application/vnd.api+json",
         "Content-Type": "application/vnd.api+json",
@@ -126,22 +126,22 @@
       "request_content_type": "application/vnd.api+json",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\"hardware\":{\"id\":\"52cf653e-21bb-4e38-ad9d-1ef02006dfa1\",\"name\":\"Computer\",\"length\":120.0,\"width\":null,\"height\":null,\"weight\":null,\"serial_number\":null,\"price\":null,\"state\":\"available\",\"note\":null,\"warranty_expired_on\":\"2015-07-14\",\"created_at\":\"2015-07-14T17:05:11.497Z\",\"updated_at\":\"2015-07-14T17:05:11.497Z\",\"location_id\":null}}",
+      "response_body": "{\"hardware\":{\"id\":\"f458db44-3546-48c1-a4f9-e05e25de8ee7\",\"name\":\"Computer\",\"length\":120.0,\"width\":null,\"height\":null,\"weight\":null,\"serial_number\":null,\"price\":null,\"state\":\"available\",\"note\":null,\"warranty_expired_on\":\"2015-07-14\",\"created_at\":\"2015-07-14T18:14:52.370Z\",\"updated_at\":\"2015-07-14T18:14:52.370Z\",\"location_id\":null}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
-        "Location": "http://example.org/hardwares/52cf653e-21bb-4e38-ad9d-1ef02006dfa1",
+        "Location": "http://example.org/hardwares/f458db44-3546-48c1-a4f9-e05e25de8ee7",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"0b2fa691722adc055d7cfc53b6758a12\"",
+        "ETag": "W/\"f46756a1207abde0ae80709a55ef5a61\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
         "Set-Cookie": "request_method=POST; path=/",
-        "X-Request-Id": "7e739e39-2325-495c-bcaf-6ea1a2aeb448",
-        "X-Runtime": "0.014525",
+        "X-Request-Id": "135b30bc-f621-4ceb-b9e3-1e0150f7c059",
+        "X-Runtime": "0.013366",
         "Content-Length": "332"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:3000api/hardwares\" -d '{\"hardware\":{\"name\":\"Computer\",\"length\":120.0,\"state\":\"available\",\"warranty_expired_on\":\"2015-07-14 19:05:11 +0200\"}}' -X POST \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Token token=\\\"35809e414b3c523f14f10e6b0f51c1763e2b9e98ec432408c8dcaa1a77a43534b928f05f3494278cc3ec598674877620f962f90770f9298fe1e80aa1422150f8\\\"\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+      "curl": "curl \"http://localhost:3000api/hardwares\" -d '{\"hardware\":{\"name\":\"Computer\",\"length\":120.0,\"state\":\"available\",\"warranty_expired_on\":\"2015-07-14 20:14:52 +0200\"}}' -X POST \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Token token=\\\"35809e414b3c523f14f10e6b0f51c1763e2b9e98ec432408c8dcaa1a77a43534b928f05f3494278cc3ec598674877620f962f90770f9298fe1e80aa1422150f8\\\"\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
     }
   ]
 }
